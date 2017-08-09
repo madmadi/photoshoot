@@ -1,0 +1,7 @@
+<ul class='nav nav-pills nav-stacked'>
+<% dir.children.forEach(function(item){
+	if(item.extension) return; %>
+	<li><a href='#<%= item.name.trim().replace(' ', '_') %>'><%= item.name.trim() %></a></li>
+	<li><%- include('category', { dir: item }) %></li>
+<% }); %>
+</ul>

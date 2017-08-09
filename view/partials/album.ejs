@@ -1,0 +1,24 @@
+<% var path = dir.path.trim().split('/'); path.shift(); %>
+<ul class="album">
+    <% if(path.length > 0){ %>
+        <ul class="breadcrumb">
+            <% path.forEach(function(item, index){ %>
+                <li>
+                    <% if(path[index+1]){ %> <a href="#<%= item.trim().replace(' ', '_') %>"><%= item.trim() %></a>
+                    <% } else { %> <span id='<%= item.trim().replace(' ', '_') %>'><%= item.trim() %></span> <% } %>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+    <% dir.children.forEach(function(item){
+        if(item.extension == undefined || ['.jpg', '.jpeg'].indexOf(item.extension) == -1) return %>
+        <li class='photo'><img class="b-lazy"
+            src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+            data-src="photo/lq/<%= item.path %>" onclick='showImg(this)'></li>
+    <% }); %>
+</ul>
+
+<% dir.children.forEach(function(item){
+    if(item.extension) return %>
+    <%- include('album', { dir: item }) %>
+<% }); %>

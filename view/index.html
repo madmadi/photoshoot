@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title><%- config.title %></title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+		<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+		<link rel='stylesheet' href='bootstrap.min.css'>
+		<link rel='stylesheet' href='style.css'>
+	</head>
+	<body data-spy="scroll" data-target="#category" data-offset="70">
+		<div id='header' class='col-xs-12'>
+			<div class='image col-sm-3 col-xs-3'></div>
+			<p class='title col-sm-8 col-xs-9'><%- config.name %></p>
+		</div>
+		<div id='container'>
+			<div id='photos' class='col-xs-12 col-sm-8 col-lg-9'>
+				<%- include('partials/album', { dir: tree }) %>
+			</div>
+			<div id="sticky-anchor" class='hidden-xs col-sm-4 col-lg-3'></div>
+			<nav id='category' class='hidden-xs col-xs-12 col-sm-4 col-lg-3'>
+				<a class='title' href="#">Category</a>
+				<hr>
+				<%- include('partials/category', { dir: tree }) %>
+			</nav>
+		</div>
+
+		<div id='categoryFab'
+				class='visible-xs'
+				onclick='$("#category").removeClass("hidden-xs");
+				$("html").css("overflowY", "hidden")'></div>
+
+		<div id='image-view' style="display: none;" >
+			<div id='canvas' class='col-xs-12'>
+				<div class='title' unselectable="on" onselectstart="return false;">
+					<a class='titleBtn xclose' onclick='hideImg()'>&times;</a>
+					<a class='titleBtn toggleFill' onclick='toggleFill()'>▣</a>
+					<a class='titleBtn download' onclick='downloadImg()'>Download ⇣</a>
+				</div>
+				<div class='body'>
+					<div class='navButton' unselectable="on" onselectstart="return false;">
+						<div class='prev' onclick="prevImg()">< PREV</div>
+						<div class='next' onclick="nextImg()">NEXT ></div>
+					</div>
+					<div class='image' onclick='toggleTitle()'></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src='jquery.min.js'></script>
+	<script src='bootstrap.min.js'></script>
+	<script src='blazy.min.js'></script>
+	<script src='script.js'></script>
+</html>

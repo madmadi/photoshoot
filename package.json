@@ -1,0 +1,21 @@
+{
+  "name": "photo-shoot",
+  "version": "1.0.0",
+  "description": "Personal photo shoot",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammad Mahdi Meraji",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "directory-tree": "^1.1.1",
+    "ejs": "^2.5.3",
+    "express": "^4.13.4",
+    "imagemin": "^5.2.2",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "mkpath": "^1.0.0"
+  }
+}
