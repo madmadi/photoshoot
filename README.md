@@ -19,6 +19,9 @@ $ node app.js
 ```
 and photoshoot will be running on 127.0.0.1:4000
 
+## Config
+You can also change your photo shoot name and title by editing the `config.json` file.
+
 ## Screenshots
 _Portrait_
 
