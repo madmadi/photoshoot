@@ -5,7 +5,7 @@ _Also is suitable for slow internet connections(with image compression)_
 
 ## Install
 ```
-$ git clone https://github.com/moamadmadi/photoshoot
+$ git clone https://github.com/madmadi/photoshoot
 $ cd photoshoot
 $ npm install
 ```
@@ -26,13 +26,13 @@ You can also change your photo shoot name and title by editing the `config.json`
 _Portrait_
 
 <p align="center">
-  <img src='https://github.com/moamadmadi/photoshoot/blob/master/screenshots/portrait.png' >
+  <img src='https://github.com/madmadi/photoshoot/blob/master/screenshots/portrait.png' >
 </p>
 
 <hr>
 
 _Landscape_
-<img src='https://github.com/moamadmadi/photoshoot/blob/master/screenshots/landscape.png' >
+<img src='https://github.com/madmadi/photoshoot/blob/master/screenshots/landscape.png' >
 
 ## License
 
